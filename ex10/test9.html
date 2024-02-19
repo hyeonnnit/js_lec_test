@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript Dates</h1>
+    <h2>Using Date.now()</h2>
+    <p>Calculate the number of years since January 1, 1970:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // Calculate milliseconds in a year
+        const minute = 1000 * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+        const year = day * 365;
+
+        // Divide Date.now() with a year
+        let years = Math.round(Date.now() / year);
+        document.getElementById("demo").innerHTML = years;
+    </script>
+    <h1>JavaScript Dates</h1>
+    <h2>The getTimezoneOffset() Method</h2>
+
+    <p>The time zone difference in minutes is:</p>
+    <p id="demo1"></p>
+
+    <script>
+        const d = new Date();
+        document.getElementById("demo1").innerHTML = d.getTimezoneOffset();
+    </script>
+</body>
+
+</html>
